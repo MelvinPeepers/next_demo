@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import styles from './Pokemon.module.css'
 
 function Pokemon({ pokemon }) {
     return (
@@ -8,14 +8,9 @@ function Pokemon({ pokemon }) {
             <title>Pokemon: {pokemon?.name}</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <div>
+        <div className={styles.container}>
             Welcome, {pokemon?.name}!
             <img src={pokemon?.sprites.front_default} />    
-        </div>
-        <div>
-            <Link href="/">
-            <a>Go back home</a>
-            </Link>
         </div>
     </>
     )
