@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 function Pokemon({ pokemon }) {
     return (
@@ -10,6 +11,11 @@ function Pokemon({ pokemon }) {
         <div>
             Welcome, {pokemon?.name}!
             <img src={pokemon?.sprites.front_default} />    
+        </div>
+        <div>
+            <Link href="/">
+            <a>Go back home</a>
+            </Link>
         </div>
     </>
     )
